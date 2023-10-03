@@ -3,12 +3,10 @@ Script to run through arknights daily using ocr
 https://pypi.org/project/PyAutoGUI/
 https://github.com/drov0/python-imagesearch 
 """
+from os.path import exists
 
-import tkinter as tk
 import pyautogui
 import pydirectinput
-import time
-from os.path import exists
 from python_imagesearch.imagesearch import *
 
 pyautogui.PAUSE = 0
@@ -50,12 +48,12 @@ def pyautoguiocrtest():
 
 
 def pythonimagesearch():
-    pos = imagesearch("./github.jpg")
+    pos = imagesearch("./tests/icon.png")
     if pos[0] != -1:
         print("position : ", pos[0], pos[1])
     else:
         print("image not found")
-    pyautogui.moveTo(pos[0] - 1920, pos[1], duration=0.1)
+    pyautogui.moveTo(pos[0], pos[1], duration=0.1)
     # click_image("./newtab.jpg", pos, "right", 0.1, offset=5)
 
 

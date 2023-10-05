@@ -11,11 +11,6 @@ import pyautogui
 import pydirectinput
 import operator_card
 
-from PIL import ImageGrab
-from functools import partial
-
-ImageGrab.grab = partial(ImageGrab.grab, all_screens=True)
-
 pyautogui.PAUSE = 0
 pydirectinput.PAUSE = 0
 pyautogui.FAILSAFE = False
